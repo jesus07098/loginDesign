@@ -1,14 +1,11 @@
 import React from "react";
-import { CssBaseline, ThemeProvider } from "@material-ui/core";
+import {AppRouter} from './routers/AppRouter'
 
-import Employees from "./pages/employe/Employee";
-import theme from "./theme/appTheme";
 
-const App = () => (
-  <ThemeProvider theme={theme}>
-    <Employees />
-    <CssBaseline />
-  </ThemeProvider>
-);
+const App = () => {
+  return (
+   <AppRouter/>
+  )
+};
 
 export default App;

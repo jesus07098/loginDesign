@@ -20,6 +20,11 @@ const useStyles = makeStyles((theme) => ({
     position: "absolute",
     right: "10px",
   },
+  spaceBodyDrawer: {
+    width: `calc(100% - 240)`,
+    marginLeft: 240,
+  },
+
 }));
 
 const Employees = () => {
@@ -32,14 +37,14 @@ const Employees = () => {
   };
 
   return (
-    <>
+    <div className={classes.spaceBodyDrawer}>
       <PageHeader
-        title="Nuevo Empleado"
+        title="Empleados"
         subTitle="Registrar y consultar"
         icon={<PeopleOutlineTwoToneIcon fontSize="large" />}
       />
       <Button
-        text="Agregar nuevo empleado"
+        text="Agregar empleado"
         variant="outlined"
         startIcon={<AddIcon />}
         className={classes.newButton}
@@ -55,7 +60,7 @@ const Employees = () => {
       >
         <EmployeeForm recordForEdit={recordForEdit} addOrEdit={addOrEdit} />
       </Popup>
-    </>
+    </div>
   );
 }
 
